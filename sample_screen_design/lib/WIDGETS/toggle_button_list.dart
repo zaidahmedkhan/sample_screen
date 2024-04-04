@@ -28,7 +28,7 @@ class _ToggleButtonListState extends State<ToggleButtonList> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 50,
+      height: 60,
       child: Row(
         children: [
           Expanded(
@@ -46,19 +46,24 @@ class _ToggleButtonListState extends State<ToggleButtonList> {
                     widget.callback!(index);
                   },
                   child: Container(
-                    margin: EdgeInsets.only(
-                      left: index == 0 ? 0 : 0,
-                      right: 0,
+                    margin: const EdgeInsets.only(
+                      left: 0,
+                      right: 5,
                       top: 15,
-                      bottom: 8,
+                      bottom: 4,
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                    ),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
                           widget.categories![index],
                           style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
                             color: _selectedIndex == index
                                 ? Colors.white
                                 : Colors.grey,
@@ -68,7 +73,7 @@ class _ToggleButtonListState extends State<ToggleButtonList> {
                         _selectedIndex == index
                             ? Container(
                                 height: 2,
-                                width: 30, // Adjust the width as needed
+                                width: 30,
                                 color: const Color(0xffF9C034),
                               )
                             : const SizedBox(),
@@ -80,12 +85,20 @@ class _ToggleButtonListState extends State<ToggleButtonList> {
             ),
           ),
           const SizedBox(width: 15),
-          const Icon(
-            Icons.search,
-            color: Colors.grey,
+          const Padding(
+            padding: EdgeInsets.only(top: 10),
+            child: Icon(
+              Icons.search,
+              color: Colors.grey,
+              size: 30,
+            ),
           ),
-          const SizedBox(width: 10),
-          Image.asset('assets/icons/trophy.png', width: 24, height: 24),
+          const SizedBox(width: 5),
+          Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child:
+                Image.asset('assets/icons/trophy.png', width: 40, height: 40),
+          ),
           const SizedBox(width: 15),
         ],
       ),

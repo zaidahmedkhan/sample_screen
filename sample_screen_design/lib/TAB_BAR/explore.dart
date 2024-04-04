@@ -3,156 +3,175 @@ import 'package:flutter/material.dart';
 class Explore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          padding: const EdgeInsets.only(top: 10),
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: [
-                Color(0xff282829), // Left color
-                Color(0xff3A363E), // Right color
-              ],
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.only(top: 10),
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: [
+                  Color(0xff282829), // Left color
+                  Color(0xff3A363E), // Right color
+                ],
+              ),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              ),
             ),
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20),
-            ),
-          ),
-          child: Column(
-            children: [
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.only(left: 16.0),
-                    child: Text(
-                      'Countries & Regions',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+            child: Column(
+              children: [
+                const SizedBox(height: 2),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(
+                        left: 16.0,
+                        bottom: 5,
                       ),
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.only(right: 15.0),
-                        child: Text(
-                          'More',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
+                      child: Text(
+                        'Countries & Regions',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 20.0),
-                        child: Image.asset('assets/icons/iconarrow.png'),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Column(
-                    children: [
-                      Image.asset('assets/icons/sweden.png',
-                          width: 50, height: 30),
-                      const SizedBox(height: 10),
-                      const Text('Sweden',
-                          style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset('assets/icons/bangladesh.png',
-                          width: 50, height: 30),
-                      const SizedBox(height: 10),
-                      const Text('Bangladesh',
-                          style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset('assets/icons/united-kingdom.png',
-                          width: 50, height: 30),
-                      const SizedBox(height: 10),
-                      const Text('UK', style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset('assets/icons/saudi-arabia.png',
-                          width: 50, height: 30),
-                      const SizedBox(height: 10),
-                      const Text('Saudi Arabia',
-                          style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
-                ],
-              ),
-              const SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Column(
-                    children: [
-                      Image.asset('assets/icons/canada.png',
-                          width: 50, height: 30),
-                      const SizedBox(height: 10),
-                      const Text('Canada',
-                          style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset('assets/icons/pakistan.png',
-                          width: 50, height: 30),
-                      const SizedBox(height: 10),
-                      const Text(' Pakistan ',
-                          style: TextStyle(
-                            color: Colors.white,
-                          )),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset('assets/icons/ukraine.png',
-                          width: 50, height: 30),
-                      const SizedBox(height: 10),
-                      const Text(' Ukraine ',
-                          style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset('assets/icons/france.png',
-                          width: 50, height: 30),
-                      const SizedBox(height: 10),
-                      const Text('    France    ',
-                          style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
-                ],
-              ),
-            ],
+                    ),
+                    Row(
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(right: 15.0),
+                          child: Text(
+                            'More',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20.0),
+                          child: Image.asset('assets/icons/iconarrow.png'),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      children: [
+                        Image.asset('assets/icons/sweden.png',
+                            width: 50, height: 30),
+                        const SizedBox(height: 10),
+                        const Text('Sweden',
+                            style: TextStyle(color: Colors.white)),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset('assets/icons/bangladesh.png',
+                            width: 50, height: 30),
+                        const SizedBox(height: 10),
+                        const Text('Bangladesh',
+                            style: TextStyle(color: Colors.white)),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset('assets/icons/united-kingdom.png',
+                            width: 50, height: 30),
+                        const SizedBox(height: 10),
+                        const Text('UK', style: TextStyle(color: Colors.white)),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset('assets/icons/saudi-arabia.png',
+                            width: 50, height: 30),
+                        const SizedBox(height: 10),
+                        const Text('Saudi Arabia',
+                            style: TextStyle(color: Colors.white)),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 30),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      children: [
+                        Image.asset('assets/icons/canada.png',
+                            width: 50, height: 30),
+                        const SizedBox(height: 10),
+                        const Text('Canada',
+                            style: TextStyle(color: Colors.white)),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset('assets/icons/pakistan.png',
+                            width: 50, height: 30),
+                        const SizedBox(height: 10),
+                        const Text(' Pakistan ',
+                            style: TextStyle(
+                              color: Colors.white,
+                            )),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset('assets/icons/ukraine.png',
+                            width: 50, height: 30),
+                        const SizedBox(height: 10),
+                        const Text(' Ukraine ',
+                            style: TextStyle(color: Colors.white)),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset('assets/icons/france.png',
+                            width: 50, height: 30),
+                        const SizedBox(height: 10),
+                        const Text('    France    ',
+                            style: TextStyle(color: Colors.white)),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                )
+              ],
+            ),
           ),
-        ),
-        Expanded(
-          child: Container(
+          const Padding(
+            padding: EdgeInsets.only(left: 16.0, top: 20),
+            child: Row(
+              children: [
+                Text(
+                  "Trending",
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                )
+              ],
+            ),
+          ),
+          Container(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             width: MediaQuery.of(context).size.width,
             child: GridView.builder(
+              shrinkWrap: true, // Add this line
+              physics: const NeverScrollableScrollPhysics(), // Add this line
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 5,
@@ -202,8 +221,11 @@ class Explore extends StatelessWidget {
               },
             ),
           ),
-        )
-      ],
+          const SizedBox(
+            height: 100,
+          )
+        ],
+      ),
     );
   }
 }
